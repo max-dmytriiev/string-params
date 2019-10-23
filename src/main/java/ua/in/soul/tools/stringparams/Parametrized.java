@@ -32,9 +32,9 @@ public class Parametrized {
 
     public Parametrized with(String name, String value) {
         if (Strings.isNullOrEmpty(name)) {
-            throw new IllegalArgumentException("You cannot refer to anonymous parameters by name. Use index instead!");
+            throw new IllegalArgumentException(
+                    "You cannot refer to anonymous parameters by name. Use index instead!");
         }
-
         namedParameters.computeIfAbsent(name, Parameter::of).setValue(value);
         return this;
     }
@@ -42,7 +42,8 @@ public class Parametrized {
     public Parametrized with(Integer index, String value) {
         if (index < 0 || index >= parameters.size()) {
             throw new IndexOutOfBoundsException(
-                    String.format("There is no parameter with index [%d]; bounds are [0, %d]", index, parameters.size() - 1));
+                    String.format("There is no parameter with index [%d]; bounds are [0 .. %d]",
+                                  index, parameters.size() - 1));
         }
         parameters.get(index).setValue(value);
         return this;

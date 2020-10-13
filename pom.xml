@@ -14,7 +14,7 @@
         <ver.lombok>1.18.10</ver.lombok>
         <ver.guava>28.1-jre</ver.guava>
 
-        <ver.junit>4.12</ver.junit>
+        <ver.junit>4.13.1</ver.junit>
     </properties>
 
     <dependencies>

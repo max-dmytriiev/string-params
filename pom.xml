@@ -12,7 +12,7 @@
         <ver.java>1.8</ver.java>
 
         <ver.lombok>1.18.10</ver.lombok>
-        <ver.guava>28.1-jre</ver.guava>
+        <ver.guava>29.0-jre</ver.guava>
 
         <ver.junit>4.12</ver.junit>
     </properties>
